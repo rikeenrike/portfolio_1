@@ -4,15 +4,17 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host 0.0.0.0",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@iconoir/vue": "^7.3.0",
     "vue": "^3.3.11",
     "vue-lenis": "^1.0.0"
   },
   "devDependencies": {
+    "@iconify/vue": "^4.1.1",
     "@vitejs/plugin-vue": "^4.5.2",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.32",
