@@ -12,7 +12,7 @@ const emoji_1 = "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-F
         <div class="flex flex-col items-center justify-center h-fit my-10">
             <img class="aspect-square h-auto w-full rounded-md object-cover object-center md:aspect-auto" src="\src\assets\me.webp" alt="img">
         </div>
-        <div class="md:my-10 ml-10">
+        <div class="ml-0 md:my-10 ml-10">
             <div class="flex flex-row items-center mb-[5%]">
                 <h1 class="font-satoshi font-black text-light-brown text-clamp4">sul sul!</h1>
                 <img class="w-[50px] h-[50px]" :src="emoji_1"/>
