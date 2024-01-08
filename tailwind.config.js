@@ -15,6 +15,7 @@ export default {
       colors: {
         'main-bg':'#FAFAF9',
         'black':'#393A3D',
+        'dark' :'#0e0e0c',
         'white':'#FFFFFF',
         'dark-brown':'#4E4B4A',
         'light-brown':'#BCB0A6',  
@@ -32,8 +33,10 @@ export default {
         'clamp2': 'clamp(36px, 10vw, 180px)',
         'clamp3': 'clamp(16px, 2vw, 32px)',
         'clamp4': 'clamp(24px, 2.4vw, 64px)',
-        'clamptitle': 'clamp(64px, 10vw, 180px)',
+        'clamptitle': 'clamp(52px, 14vw, 180px)',
+        'clampsub': 'clamp(12px, 3vw, 24px)',
       },
+      
     },
   },
   plugins: [

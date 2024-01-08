@@ -8,7 +8,7 @@ const emoji_1 = "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-F
     <div class="flex flex-col items-center justify-center font-satoshi font-black text-dark-brown text-clamptitle">
         <h1>about me.</h1>
     </div>
-      <div class="min-h-screen grid px-[12px] md:grid-cols-[1fr,1fr] xl:px-[112px]">
+      <div class="h-auto grid px-[12px] md:grid-cols-[1fr,1fr] xl:px-[112px]">
         <div class="flex flex-col items-center justify-center h-fit my-10">
             <img class="aspect-square h-auto w-full rounded-md object-cover object-center md:aspect-auto" src="\src\assets\me.webp" alt="img">
         </div>

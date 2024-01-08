@@ -5,6 +5,7 @@ import { Iconoir } from '@iconoir/vue';
 import { Icon } from '@iconify/vue';
 import lenis from "vue-lenis";
 
+
 createApp(App)
   .component('Icon', Icon)
   .component('Iconoir', Iconoir)
