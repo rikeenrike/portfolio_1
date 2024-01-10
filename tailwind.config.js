@@ -35,6 +35,9 @@ export default {
         'clamp4': 'clamp(24px, 2.4vw, 64px)',
         'clamptitle': 'clamp(52px, 14vw, 180px)',
         'clampsub': 'clamp(12px, 3vw, 24px)',
+        'clamp5': 'clamp(12px, 1vw, 32px)',
+        'clamp6': 'clamp(30px, 5.7vw, 64px)',
+        'clamp7': 'clamp(24px, 2vw, 32px)',
       },
       
     },
