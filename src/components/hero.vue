@@ -1,11 +1,11 @@
 <script setup>
-
+import logo from './logo.vue';
 </script>
 
 <template>  
     <section class="h-screen grid items-center px-[12px] lg:grid-cols-[1fr,1fr] xl:px-[112px]">
-        <div class="flex justify-center pr-[30px]" >
-            <img  src="\src\assets\logo.webp" alt="">
+        <div class="flex justify-center pr-0 pt-[20px] lg:pr-[30px]" >
+            <logo />
         </div>
         <div class="flex flex-col lg:mt-28 h-4/5">
             <p class="text-clamp2 font-black text-dark-brown font-satoshi">welcome.</p>
