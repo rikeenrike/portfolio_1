@@ -5,10 +5,23 @@ import about from './components/about.vue';
 import technologies from './components/technologies.vue';
 import project from './components/project.vue';
 import foot from './components/foot.vue';
+import Lenis from '@studio-freight/lenis'
+
+const lenis = new Lenis();
+lenis.on('scroll', (e) => {
+  console.log(e);
+});
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
 </script>
 
-<template>  
-  <div class="fixed inset-0 overflow-auto transform-gpu bg-main-bg" v-lenis>
+<template> 
+  <div class="bg-main-bg">
     <div class="w-full h-screen ">
       <hero />
       <goal />
