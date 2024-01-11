@@ -2,5 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+    cursor: none;
+} 
 
+::selection {
+    background-color:#393A3D;
+    color: white; /* Optional: Change text color for better visibility */
+}
 
+::-moz-selection {
+    background-color: #393A3D;
+    color: white;
+}
