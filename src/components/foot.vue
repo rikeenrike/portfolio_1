@@ -1,48 +1,28 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import moment from 'moment';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-let ctx;
+import gsapAnimations from './gsapAnimations';
 const heart1 = "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Heart%20on%20Fire.png";
-const currentTime = ref('');
 
+const currentTime = ref('');
 const updateTime = () => {
   currentTime.value = moment().format('hh:mm:ss A');
 };
+
+let ctx;
 
 onMounted(() => {
   updateTime();
   setInterval(updateTime, 1000);
     ctx = gsap.context(() => {
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.from('#titlefoot', {
-        scrollTrigger: {
-            trigger: '#titlewrapperfoot',
-            start: 'top center',
-            end: 'bottom center',
-            scrub: false,
-            toggleActions: 'play none none none',
-        },
-        opacity: 0,
-        duration: 1.5,
-        ease: 'power4.inOut',
-        y: 200,
-        });
-        gsap.from('#detes', {
-        scrollTrigger: {
-            trigger: '#titlewrapperfoot',
-            start: 'bottom center',
-            end: 'bottom center',
-            scrub: false,
-            toggleActions: 'play none none none',
-        },
-        opacity: 0,
-        duration: 1.5,
-        ease: 'power4.inOut',
-        stagger: 0.2,
+        gsapAnimations.methods.animateup('#titlefoot', '#titlewrapperfoot');
+        gsapAnimations.methods.animateupSTAGGER('#detes', '#titlewrapperfoot');
     });
-    });
+});
+
+onUnmounted(() => {
+    ctx.kill();
 });
 </script>
 

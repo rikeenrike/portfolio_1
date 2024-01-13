@@ -4,9 +4,7 @@
 
 body{
     cursor: none;
-    background-color: #FAFAF9;
     color: #393A3D;
-    overflow-x: hidden;
 } 
 
 ::selection {

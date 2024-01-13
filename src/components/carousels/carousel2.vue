@@ -1,25 +1,18 @@
 <script setup>
 import { onMounted, onUnmounted } from 'vue';
+import gsapAnimations from '/src/components/gsapAnimations.js'
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+let ctx;
 
 onMounted(()=>{
-  gsap.from('#icons1', {
-    scrollTrigger:{
-        trigger: '.logos',
-        start: 'top center',
-        end: 'bottom center',
-        scrub: false,
-    },
-    y: 100,
-    opacity: 0,
-    duration: .5,
-    delay: .5,
-    stagger: 0.2,
+  ctx = gsap.context(()=>{
+    gsapAnimations.methods.animateupSTAGGER(['#icons1'],'.logos2');
+  });
 });
-})
+
+onUnmounted(()=>{
+  ctx.kill();
+});
 
 </script>
 

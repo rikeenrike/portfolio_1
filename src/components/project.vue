@@ -44,44 +44,16 @@
 
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { onMounted, onUnmounted } from 'vue';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Image from 'primevue/image';
+import gsapAnimations from './gsapAnimations';
 
 let ctx;
 
 onMounted(() => {
-    ctx = gsap.context(() => {
-      
-      gsap.registerPlugin(ScrollTrigger);
-        gsap.from('#projecttitle', {
-            scrollTrigger:{
-                trigger: '#titlewrapper',
-                start: 'top center',
-                end: 'bottom center',
-                scrub: false,
-                toggleActions: 'play none none none',
-            },
-            opacity: 0,
-            duration: 1.5,
-            ease: "power4.inOut",
-            y: 200
-        });
-        gsap.from(['#leftwing', '#images'], {
-            scrollTrigger:{
-                trigger: '#leftwingwrapper',
-                start: 'top center',
-                end: 'bottom center',
-                scrub: false,
-                toggleActions: 'play none none none',
-            },
-            opacity: 0,
-            duration: 1.5,
-            ease: "power4.inOut",
-            stagger: 0.2,
-            y: 200
-        });
+    ctx = gsap.context(() => { 
+        gsapAnimations.methods.animateup('#projecttitle','#titlewrapper');
+        gsapAnimations.methods.animateupSTAGGER(['#leftwing', '#images'],'#leftwingwrapper');
         if (window.innerWidth > 1024) {
             gsap.from('#imagewrapper', {
             scrollTrigger:{
@@ -93,14 +65,12 @@ onMounted(() => {
                 toggleActions: 'play none none none',
             },
         });
-
         }
-
     });
 });
 
 onUnmounted(() => {
-    ctx.revert();
+    ctx.kill();
 });
 
 </script>

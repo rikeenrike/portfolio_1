@@ -53,13 +53,10 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 import carousel1 from './carousels/carousel1.vue'
 import carousel2 from './carousels/carousel2.vue';
-
+import gsapAnimations from '/src/components/gsapAnimations.js'
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
 
 const smallscreen = ref(window.innerWidth < 1024);
-
 const updateScreenSize = () => {
   smallscreen.value = window.innerWidth < 1024;
 };
@@ -69,94 +66,16 @@ let ctx;
 onMounted(() => {
   window.addEventListener('resize', updateScreenSize);
     ctx = gsap.context(() => {
-
-    gsap.to(['body','#mainnav',], {
-    scrollTrigger: {
-        trigger: '#section3',
-        start: 'top center',
-        end: 'bottom center',
-        scrub: false,
-        toggleActions: 'play reverse play reverse',
-    },
-    backgroundColor: '#262626', 
-    color: '#FAFAF9',
-    duration: .5,
-
+    gsapAnimations.methods.bgchange(['#background','#mainnav'],'#section3');
+    gsapAnimations.methods.nav(['#buttonnav','#paperplane','.custom-cursor'],'#section3');
+    gsapAnimations.methods.texttowhite(['#text','#subtext'],'#section3');
+    gsapAnimations.methods.animateupSTAGGER(['#text', '.techs','#subtext'],'#section3');
     });
-
-    gsap.to(['#paperplane'],  {
-        scrollTrigger: {
-            trigger: '#section3',
-            start: 'top center',
-            end: 'bottom center',
-            scrub: false,
-            toggleActions: 'play reverse play reverse',
-        },
-        stroke: '#FAFAF9',
-        duration: .5,
-    });
-
-    gsap.to(['#buttonnav','.custom-cursor'],  {
-        scrollTrigger: {
-            trigger: '#section3',
-            start: 'top center',
-            end: 'bottom center',
-            scrub: false,
-            toggleActions: 'play reverse play reverse',
-        },
-        backgroundColor: '#FAFAF9',
-        color: '#262626',
-        duration: .5,
-    });
-
-    gsap.from(['#text', '.techs'], {
-        scrollTrigger:{
-            trigger: '#section3',
-            start: 'top center',
-            end: 'bottom center',
-            scrub: false,
-            toggleActions: 'play none none none',
-        },
-        y: 100,
-        opacity: 0,
-        duration: .5,
-        ease: 'power3.inOut',
-        stagger: 0.1,
-    })
-    gsap.to(['#text','#subtext'], {
-        scrollTrigger:{
-            trigger: '#section3',
-            start: 'top center',
-            end: 'bottom center',
-            scrub: false,
-            toggleActions: 'play reverse play reverse',
-        },
-        color: '#FAFAF9',
-        duration: .5,
-        ease: 'power3.inOut',
-
-    })
-
-    gsap.from('#subtext', {
-        scrollTrigger:{
-            trigger: '#section3 ',
-            start: 'top center',
-            end: 'bottom center',
-            scrub: false,
-            toggleActions: 'play none none none',
-        },
-        y: 100,
-        opacity: 0,
-        delay: .5,
-        duration: 1,
-        ease: 'power3.inOut',
-    })
-});
 });
 
 onUnmounted(() => {
   window.removeEventListener('resize', updateScreenSize);
-  ctx.revert();
+  ctx.kill();
 });
 </script>
 

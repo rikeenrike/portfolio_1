@@ -13,8 +13,6 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
-
-
 onMounted(() => {
     gsap.from('#nav', {
         scrollTrigger:{
@@ -31,6 +29,10 @@ onMounted(() => {
     });
 });
 
+onUnmounted(() => {
+    ctx.kill();
+});
+
 const lenis = new Lenis();
 
 function raf(time) {
@@ -42,15 +44,14 @@ requestAnimationFrame(raf)
 </script>
 
 <template> 
-    <div class="w-screen h-screen ">
-      <cursor />
+      <div id="background" class="z-[-1] fixed bg-main-bg w-screen h-screen"></div>
+      <cursor/>
       <navi id="nav"/>
       <hero id="hero"/>
-      <goal />
-      <about />
-      <technologies />
-      <project />
-      <foot />
-    </div>
+      <goal/>
+      <about/>
+      <technologies/>
+      <project/>
+      <foot/>
 </template>
 

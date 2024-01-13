@@ -39,7 +39,6 @@ onBeforeUnmount(() => {
     pointer-events: none;
     z-index: 9999;
     cursor: none;
-  
 }
 
 </style>

@@ -36,52 +36,14 @@
 const emoji_1 = "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Waving%20Hand%20Medium-Light%20Skin%20Tone.png";
 import { onMounted, onUnmounted} from 'vue';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsapAnimations from './gsapAnimations';
 
 let ctx;
   onMounted(() => {
     ctx = gsap.context(()=>{
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.from('#header', {
-      scrollTrigger:{
-        trigger: '.aboutsection',
-        start: 'top center',
-        end: 'bottom center',
-        scrub: false,
-        toggleActions: 'play none none none',
-      },
-      y: 100,
-      opacity: 0,
-      duration: 1.5,
-      ease: 'power3.inOut',
-    })
-    gsap.from('#sulsul', {
-      scrollTrigger:{
-        trigger: '#header',
-        start: 'bottom center',
-        end: 'bottom center',
-        scrub: false,
-        toggleActions: 'play none none none',
-      },
-      y: 100,
-      opacity: 0,
-      duration: .5,
-      ease: 'power3.inOut',
-    })
-    gsap.from('#desc', {
-      scrollTrigger:{
-        trigger: '#img',
-        start: 'top center',
-        end: 'bottom center',
-        scrub: false,
-        toggleActions: 'play none none none',
-      },
-      y: 100,
-      opacity: 0,
-      duration: .5,
-      stagger: 0.3,
-      ease: 'power3.inOut',
-    })
+    gsapAnimations.methods.animateup('#header', '.aboutsection'); 
+    gsapAnimations.methods.animateup('#sulsul', '#header');
+    gsapAnimations.methods.animateupSTAGGER('#desc', '#img');
     if (window.innerWidth > 1024) {
       gsap.from('#img', {
         scrollTrigger:{
@@ -97,6 +59,6 @@ let ctx;
   });
   });
   onUnmounted(() => {
-    ctx.revert();
+    ctx.kill();
   })
 </script>
