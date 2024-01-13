@@ -6,7 +6,7 @@ let ctx;
 
 onMounted(()=>{
   ctx = gsap.context(()=>{
-    gsapAnimations.methods.animateupSTAGGER(['#icons1'],'.logos2');
+    gsapAnimations.methods.animateupSTAGGER(['#icons1'],'.logos');
   });
 });
 

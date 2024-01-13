@@ -4,19 +4,17 @@
 
 body{
     cursor: none;
-    color: #393A3D;
 } 
 
 ::selection {
     background-color:#393A3D;
-    color: white; /* Optional: Change text color for better visibility */
+    color: white; 
 }
 
 ::-moz-selection {
     background-color: #393A3D;
     color: white;
 }
-
 
 ::-webkit-scrollbar {
     display: none;

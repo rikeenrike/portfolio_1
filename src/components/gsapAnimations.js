@@ -16,7 +16,8 @@ export default {
         },
         backgroundColor: '#262626', 
         color: '#FAFAF9',
-        duration: 0.5,
+        duration: 1,
+        ease: 'power3.inOut',
       }); 
     },
     texttowhite(selector, trigger) {
@@ -29,7 +30,8 @@ export default {
             toggleActions: 'play reverse play reverse',
         },
         color: '#FAFAF9', 
-        duration: 0.5,
+        duration: 1,
+        ease: 'power3.inOut',
         });
     },
     nav(selector, trigger) {
@@ -44,7 +46,9 @@ export default {
         backgroundColor: '#FAFAF9',
         color: '#262626',
         stroke: '#FAFAF9',
-        duration: 0.5,
+        duration: 1,
+        ease: 'power3.inOut',
+
     });
     },
     animateupSTAGGER(selector, trigger){

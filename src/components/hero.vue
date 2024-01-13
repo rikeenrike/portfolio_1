@@ -32,7 +32,7 @@ onMounted(() => {
 
   gsap.to('#bar', {
     left: '100%',
-    duration: 1.5, // Change this to the desired duration of the animation
+    duration: 1.5, 
     repeat: -1,
     ease: 'power4.inOut',
   });
