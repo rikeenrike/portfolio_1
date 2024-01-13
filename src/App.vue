@@ -8,7 +8,6 @@ import foot from './components/foot.vue';
 import navi from './components/navi.vue';
 import Lenis from '@studio-freight/lenis'
 import cursor from './components/cursor.vue';
-import gsappractice from './components/gsappractice.vue';
 import { onMounted, onUnmounted, ref } from 'vue';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -23,16 +22,14 @@ onMounted(() => {
             start: 'bottom center',
             end: 'center center',
             scrub: false,
-            markers: true,
             toggleActions: 'play none none reverse',
         },
         opacity: 0,
-        duration: 2,
+        duration: 1.5,
         ease: "power4.inOut",
         y: -500
     });
 });
-
 
 const lenis = new Lenis();
 
@@ -42,22 +39,18 @@ function raf(time) {
 }
 requestAnimationFrame(raf)
 
-
 </script>
 
 <template> 
-  <div class="bg-main-bg">
-    <div class="w-full h-screen ">
+    <div class="w-screen h-screen ">
       <cursor />
-      <navi class="fixed z-10" id="nav"/>
+      <navi id="nav"/>
       <hero id="hero"/>
-      <!-- <gsappractice/> -->
       <goal />
       <about />
       <technologies />
       <project />
       <foot />
     </div>
-  </div>
 </template>
 

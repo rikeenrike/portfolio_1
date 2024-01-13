@@ -1,43 +1,106 @@
 <template>
-    <section class=" h-auto overflow-hidden flex flex-col items-center px-[12px] xl:px-[112px]" >
-        <div class="flex flex-col leading-none my-10">   
-            <h3 class="font-satoshi font-black text-light-brown text-clampsub text-left ml-0 lg:ml-[1%] ">school</h3>
-            <h1 class="font-satoshi font-black text-dark-brown text-clamptitle items-center -mt-[5%] ">project hub.</h1>
-         
+    <section id="section4" class="select-none h-fit overflow-hidden flex flex-col items-center px-[12px] xl:px-[112px]" >
+        <div id="titlewrapper" class="flex flex-col leading-none my-10">   
+            <h3 id="projecttitle" class="font-satoshi font-black text-light-brown text-clampsub text-left ml-0 lg:ml-[1%] ">school</h3>
+            <h1 id="projecttitle" class="font-satoshi font-black text-dark-brown text-clamptitle items-center -mt-[5%] ">project hub.</h1>  
         </div>
       <div class="h-auto grid md:grid-cols-[1fr,1fr]">
-        <div class="mr-0 md:my-10 md:mr-10">
-            <div class="flex flex-row items-center pb-[10px] gap-5">
-                <img class="w-[50px] h-[50px]" src="\src\assets\uiccafe.webp"/>
-                <a class="font-satoshi font-black text-light-brown text-clamp4 cursor-pointer" href="https://uiccafe.netlify.app/menu">UIC Cafe</a>
+        <div id="leftwingwrapper" class="mr-0 md:my-10 md:mr-10 h-fit">
+            <div class="flex flex-row items-center pb-[10px] lg:gap-5">
+                <div id="leftwing"></div>
+                <img id="leftwing" class="w-[50px] h-[50px]" src="\src\assets\uiccafe.webp"/>
+                <a id="leftwing" class="font-satoshi font-black text-light-brown text-clamp4 cursor-none" target="_blank" href="https://uiccafe.netlify.app/menu">UIC Cafe</a>
             </div>
             <div class="flex mb-[5%] gap-5">
-                <div class="flex items-center justify-center px-[15px] rounded-full border-neutral-700 border"> 
-                    <h1 class=" text-center text-clamp5 font-bold text-light-brown">2023</h1>
+                <div id="leftwing" class="flex items-center justify-center px-[15px] rounded-full border-neutral-700 border"> 
+                    <h1  class=" text-center text-clamp5 font-bold text-light-brown">2023</h1>
                 </div>
-                <div class="flex items-center justify-center px-[15px] rounded-full border-neutral-700 border"> 
-                    <h1 class=" flex text-center text-clamp5 font-bold text-light-brown">Vue.js • PrimeVue • HTML •  CSS</h1>
+                <div id="leftwing" class="flex items-center justify-center px-[15px] rounded-full border-neutral-700 border"> 
+                    <h1  class=" flex text-center text-clamp5 font-bold text-light-brown">Vue.js • PrimeVue • HTML •  CSS</h1>
                 </div>
             </div>
         <div class="flex flex-col gap-y-10 font-satoshi font-bold text-black text-clamp3 ">
-          <p>
+          <p id="leftwing">
             UIC Cafe is essentially an ordering system for the university personnel, 
             they have the ability to order directly using the web application, track their orders, 
             and see the latest items in the menu.
           </p>
-          <p>
+          <p id="leftwing">
             Meanwhile, this system also includes the administrator, where the staff has the ability 
             to add, edit, delete, update items in their menu, just like any typical admin system they 
             receive orders, monitor their stocks, etc.
           </p>
           </div>
         </div>
-        <div class="flex flex-col items-center justify-center h-fit my-10">
-            <img class="aspect-rectangle h-auto w-full rounded-md object-cover object-center md:aspect-auto pb-10" src="\src\assets\image 300.svg" alt="img">
-            <img class="aspect-rectangle h-auto w-full rounded-md object-cover object-center md:aspect-auto pb-10" src="\src\assets\image 299.svg" alt="img">
-            <img class="aspect-rectangle h-auto w-full rounded-md object-cover object-center md:aspect-auto pb-10" src="\src\assets\image 298.svg" alt="img">
-            <img class="aspect-rectangle h-auto w-full rounded-md object-cover object-center md:aspect-auto pb-10" src="\src\assets\image 297.svg" alt="img">
+        <div id="imagewrapper" class="flex flex-col items-center justify-center h-fit my-10">
+            <img id="images" class="aspect-rectangle h-auto w-full rounded-md object-cover object-center md:aspect-auto pb-10" src="\src\assets\image 300.svg" alt="img">
+            <img id="images" class="aspect-rectangle h-auto w-full rounded-md object-cover object-center md:aspect-auto pb-10" src="\src\assets\image 299.svg" alt="img">
+            <img id="images" class="aspect-rectangle h-auto w-full rounded-md object-cover object-center md:aspect-auto pb-10" src="\src\assets\image 298.svg" alt="img">
+            <img id="images" class="aspect-rectangle h-auto w-full rounded-md object-cover object-center md:aspect-auto pb-10" src="\src\assets\image 297.svg" alt="img">
         </div>
       </div>
     </section>
 </template>
+
+
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Image from 'primevue/image';
+
+let ctx;
+
+onMounted(() => {
+    ctx = gsap.context(() => {
+      
+      gsap.registerPlugin(ScrollTrigger);
+        gsap.from('#projecttitle', {
+            scrollTrigger:{
+                trigger: '#titlewrapper',
+                start: 'top center',
+                end: 'bottom center',
+                scrub: false,
+                toggleActions: 'play none none none',
+            },
+            opacity: 0,
+            duration: 1.5,
+            ease: "power4.inOut",
+            y: 200
+        });
+        gsap.from(['#leftwing', '#images'], {
+            scrollTrigger:{
+                trigger: '#leftwingwrapper',
+                start: 'top center',
+                end: 'bottom center',
+                scrub: false,
+                toggleActions: 'play none none none',
+            },
+            opacity: 0,
+            duration: 1.5,
+            ease: "power4.inOut",
+            stagger: 0.2,
+            y: 200
+        });
+        if (window.innerWidth > 1024) {
+            gsap.from('#imagewrapper', {
+            scrollTrigger:{
+                trigger: '#leftwingwrapper',
+                start: 'center center',
+                end: '270% center',
+                pin: true,
+                scrub: false,
+                toggleActions: 'play none none none',
+            },
+        });
+
+        }
+
+    });
+});
+
+onUnmounted(() => {
+    ctx.revert();
+});
+
+</script>

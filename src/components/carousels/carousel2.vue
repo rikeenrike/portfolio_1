@@ -1,23 +1,50 @@
+<script setup>
+import { onMounted, onUnmounted } from 'vue';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+onMounted(()=>{
+  gsap.from('#icons1', {
+    scrollTrigger:{
+        trigger: '.logos',
+        start: 'top center',
+        end: 'bottom center',
+        scrub: false,
+    },
+    y: 100,
+    opacity: 0,
+    duration: .5,
+    delay: .5,
+    stagger: 0.2,
+});
+})
+
+</script>
+
+
+
 <template>
-    <div class="logos">
+    <div class="logos2">
     <div class="logos-slide">
         <div class="flex items-center gap-[100px] mr-[100px]">
-            <Icon icon="devicon:vscode" width="250" class="vs" />
-            <Icon icon="logos:figma" width="165" class="figma" />
-            <Icon icon="logos:netbeans" width="235" class="netbeans" />
-            <Icon icon="logos:xampp" width="250" class="xamp" />
-            <Icon icon="skill-icons:premiere" width="250" class="pr" />
-            <Icon icon="skill-icons:aftereffects" width="250" class="ae"/>  
+            <Icon id="icons1" icon="devicon:vscode" width="250" class="vs" />
+            <Icon id="icons1" icon="logos:figma" width="165" class="figma" />
+            <Icon id="icons1" icon="logos:netbeans" width="235" class="netbeans" />
+            <Icon id="icons1" icon="logos:xampp" width="250" class="xamp" />
+            <Icon id="icons1" icon="skill-icons:premiere" width="250" class="pr" />
+            <Icon id="icons1" icon="skill-icons:aftereffects" width="250" class="ae"/>  
         </div>       
     </div>
     <div class="logos-slide">
         <div class="flex items-center gap-[100px] mr-[100px]">
-            <Icon icon="devicon:vscode" width="250" class="vs" />
-            <Icon icon="logos:figma" width="165" class="figma" />
-            <Icon icon="logos:netbeans" width="235" class="netbeans" />
-            <Icon icon="logos:xampp" width="250" class="xamp" />
-            <Icon icon="skill-icons:premiere" width="250" class="pr" />
-            <Icon icon="skill-icons:aftereffects" width="250" class="ae"/>
+            <Icon id="icons1" icon="devicon:vscode" width="250" class="vs" />
+            <Icon id="icons1" icon="logos:figma" width="165" class="figma" />
+            <Icon id="icons1" icon="logos:netbeans" width="235" class="netbeans" />
+            <Icon id="icons1" icon="logos:xampp" width="250" class="xamp" />
+            <Icon id="icons1" icon="skill-icons:premiere" width="250" class="pr" />
+            <Icon id="icons1" icon="skill-icons:aftereffects" width="250" class="ae"/>
         </div>
     </div>
   </div>
@@ -37,7 +64,7 @@ to {
 display: inline-block;
 animation: 35s slide infinite linear;
 }
-.logos {
+.logos2 {
 overflow: hidden;
 padding: 60px 0;
 white-space: nowrap;

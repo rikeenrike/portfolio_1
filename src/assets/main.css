@@ -2,8 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+body{
     cursor: none;
+    background-color: #FAFAF9;
+    color: #393A3D;
+    overflow-x: hidden;
 } 
 
 ::selection {
@@ -15,3 +18,8 @@
     background-color: #393A3D;
     color: white;
 }
+
+
+::-webkit-scrollbar {
+    display: none;
+  }
