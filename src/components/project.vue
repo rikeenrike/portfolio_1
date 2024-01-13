@@ -8,7 +8,7 @@
         <div id="leftwingwrapper" class="mr-0 md:my-10 md:mr-10 h-fit">
             <div class="flex flex-row items-center pb-[10px] lg:gap-5">
                 <div id="leftwing"></div>
-                <img id="leftwing" class="w-[50px] h-[50px]" src="\src\assets\uiccafe.webp"/>
+                <img id="leftwing" class="w-[50px] h-[50px]" src="\src\assets\uiccafe.webp" alt="img"/>
                 <a id="leftwing" class="font-satoshi font-black text-light-brown text-clamp4 cursor-none" target="_blank" href="https://uiccafe.netlify.app/menu">UIC Cafe</a>
             </div>
             <div class="flex mb-[5%] gap-5">

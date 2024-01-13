@@ -5,12 +5,12 @@
     </div>
       <div class="h-fit grid px-[12px] md:grid-cols-[1fr,1fr] xl:px-[112px]">
         <div  class="flex flex-col items-center justify-center h-fit my-10">
-            <img id="img" class="aspect-square h-auto w-full rounded-md object-cover object-center md:aspect-auto" src="\src\assets\me.webp" alt="img">
+            <img id="img" class="aspect-square h-auto w-full rounded-md object-cover object-center md:aspect-auto" src="\src\assets\me.webp" alt="image of pogi">
         </div>
         <div id="sulandesc" class="pl-0 md:py-10 md:pl-10">
             <div id="sulsul" class="flex flex-row items-center mb-[5%]">
                 <h1 class="font-satoshi font-black text-light-brown text-clamp4">hello there!</h1>
-                <img class="w-[50px] h-[50px]" :src="emoji_1"/>
+                <img class="w-[50px] h-[50px]" :src="emoji_1" alt="emoji"/>
             </div>
         <div id="desc" class="flex flex-col gap-y-10 font-satoshi font-bold text-black text-clamp3 ">
           <p id="desc">

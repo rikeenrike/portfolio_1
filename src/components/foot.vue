@@ -35,7 +35,7 @@ onUnmounted(() => {
         <div id="detes" class="select-none mr-10">
             <h1 class="text-clamp6 font-bold text-dark-brown">This is the part where you get in touch and we make amazing things happen!</h1>
             <div class="h-1/2 flex justify-center">
-                <img class="w-1/2" src="\src\assets\signature.svg" alt="">
+                <img class="w-1/2" src="\src\assets\signature.svg" alt="sig">
             </div>
         </div>            
         <div class="flex flex-col font-satoshi text-clamp4 py-10 lg:py-0">

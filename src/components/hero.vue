@@ -66,9 +66,8 @@ onUnmounted(() => {
               <div class="w-[50px] relative overflow-hidden">
                 <div id="bar" class="h-[70%] border-b-4 border-black relative left-[-100%]"></div>
               </div>
-                <a>or explore by scrolling</a>
+                <p>or explore by scrolling</p>
             </div>
         </div>
-    </section>
-    
+    </section>   
 </template>
