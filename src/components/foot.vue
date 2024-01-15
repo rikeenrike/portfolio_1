@@ -47,8 +47,8 @@ onUnmounted(() => {
             </div>
             <div id="detes">
                 <h1 class="text-dark-brown font-black">details</h1>
-                <p class="text-dark-brown text-clamp3 font-regular">enriqueralph229@gmail.com</p>
-                <p class="text-dark-brown text-clamp3 font-regular">+639 77 123 4567</p>
+                <p class="text-dark-brown text-clamp3 font-regular">iskemberdu123@gmail.com</p>
+                <p class="text-dark-brown text-clamp3 font-regular">+63 917 156 4324</p>
             </div>
             <div id="detes" class="flex flex-col">
                 <h1 class="text-dark-brown font-black">socials</h1>

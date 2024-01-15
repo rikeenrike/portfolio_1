@@ -18,9 +18,9 @@ import gsapAnimations from '/src/components/gsapAnimations.js'
 let ctx;
 onMounted(() => {
     ctx = gsap.context(() => {
-    gsapAnimations.methods.bgchange(['#background','#mainnav'],'.goal');
-    gsapAnimations.methods.texttowhite(['.goal'],'.goal');
-    gsapAnimations.methods.nav(['#buttonnav','#paperplane','.custom-cursor'],'.goal');
+    gsapAnimations.methods.bgchange(['#background','#mainnav'],'#section2');
+    gsapAnimations.methods.texttowhite(['.goal'],'#section2');
+    gsapAnimations.methods.nav(['#buttonnav','#paperplane','.custom-cursor'],'#section2');
     });
 });
 onUnmounted(() => {

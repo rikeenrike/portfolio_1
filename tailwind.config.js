@@ -14,7 +14,7 @@ export default {
       },
       colors: {
         'main-bg':'#FAFAF9',
-        'black':'#393A3D',
+        'black':'#0E0E0C',
         'dark' :'#0e0e0c',
         'white':'#FFFFFF',
         'dark-brown':'#4E4B4A',
@@ -43,7 +43,15 @@ export default {
     },
   },
   plugins: [
-],
+    function({ addBase, config }) {
+      addBase({
+        '::selection': { backgroundColor: config('theme.colors.gray.800'), color: config('theme.colors.white') },
+        '::-moz-selection': { backgroundColor: config('theme.colors.gray.800'), color: config('theme.colors.white') },
+        '::-webkit-scrollbar': { display: 'none' },
+        'body': { cursor: 'none' },
+      })
+    },
+  ],
 
 }
 

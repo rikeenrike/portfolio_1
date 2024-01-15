@@ -14,10 +14,10 @@ export default {
           scrub: false,
           toggleActions: 'play reverse play reverse',
         },
-        backgroundColor: '#262626', 
+        backgroundColor: '#0E0E0C', 
         color: '#FAFAF9',
-        duration: 1,
-        ease: 'power3.inOut',
+        duration: .5,
+
       }); 
     },
     texttowhite(selector, trigger) {
@@ -30,7 +30,7 @@ export default {
             toggleActions: 'play reverse play reverse',
         },
         color: '#FAFAF9', 
-        duration: 1,
+        duration: .5,
         ease: 'power3.inOut',
         });
     },
@@ -46,7 +46,7 @@ export default {
         backgroundColor: '#FAFAF9',
         color: '#262626',
         stroke: '#FAFAF9',
-        duration: 1,
+        duration: .5,
         ease: 'power3.inOut',
 
     });
