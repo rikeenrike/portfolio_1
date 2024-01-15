@@ -11,6 +11,7 @@
   "dependencies": {
     "@iconoir/vue": "^7.3.0",
     "@studio-freight/lenis": "^1.0.33",
+    "@tailwindcss/typography": "^0.5.10",
     "gsap": "^3.12.4",
     "moment": "^2.30.1",
     "primevue": "^3.46.0",

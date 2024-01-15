@@ -1,6 +1,6 @@
 <template>
     <section id="section1" class="select-none aboutsection">
-    <div id="header" class="flex flex-col items-center justify-center font-satoshi font-black text-dark-brown text-clamptitle">
+    <div id="header" class="flex flex-col items-center justify-center font-black text-dark-brown text-clamptitle">
         <h1>about me.</h1>
     </div>
       <div class="h-fit grid px-[12px] md:grid-cols-[1fr,1fr] xl:px-[112px]">
@@ -9,10 +9,10 @@
         </div>
         <div id="sulandesc" class="pl-0 md:py-10 md:pl-10">
             <div id="sulsul" class="flex flex-row items-center mb-[5%]">
-                <h1 class="font-satoshi font-black text-light-brown text-clamp4">hello there!</h1>
+                <h1 class=" font-black text-light-brown text-clamp4">hello there!</h1>
                 <img class="w-[50px] h-[50px]" :src="emoji_1" alt="emoji"/>
             </div>
-        <div id="desc" class="flex flex-col gap-y-10 font-satoshi font-bold text-black text-clamp3 ">
+        <div id="desc" class="flex flex-col gap-y-10  font-bold text-black text-clamp3 ">
           <p id="desc">
             I'm Ralph Enrique, a 20-year-old 2nd-year Information Technology student in Davao City, 
             Philippines. Currently immersed in web development, UI/UX design, and programming, with a 

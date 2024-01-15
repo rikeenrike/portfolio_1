@@ -19,7 +19,7 @@ onMounted(() => {
   const navItems = document.querySelectorAll('#navmain');
   navItems.forEach(item => {
     item.addEventListener('mouseover', () => {
-      gsap.to(item, { color: '#4E4B4A', duration: 0.2, scale:1.05,  ease: 'power3.inOut'});
+      gsap.to(item, { color: '#0E0E0C', duration: 0.2, scale:1.05,  ease: 'power3.inOut'});
     });
     item.addEventListener('mouseout', () => {
       gsap.to(item, { color: '#D4D2D0', duration: 0.2, scale:1});
@@ -51,7 +51,7 @@ onUnmounted(() => {
             <logo />
         </div>
         <div class="flex flex-col lg:mt-28 h-4/5">
-            <p class="text-clamp2 font-black text-dark-brown font-satoshi" id="greet" >welcome.</p>
+            <p class="text-clamp2 font-black text-dark-brown" id="greet" >welcome.</p>
             <div class="flex-wrap lg:flex lg:w-[450px] xl:w-[600px] 2xl:w-auto">
                 <div class="text-body2 text-light-gray font-bold lg:text-mod1 
                 lg:flex flex-wrap xl:text-[42px] 2xl:text-heading-3 w-full  " >
