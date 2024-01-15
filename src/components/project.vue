@@ -27,7 +27,7 @@
           </p>
           <p id="leftwing">
             Meanwhile, this system also includes the administrator, where the staff has the ability 
-            to add, edit, delete, update items in their menu, just like any typical admin system they 
+            to add, edit, delete, and update items in their menu, just like any typical admin system they 
             receive orders, monitor their stocks, etc.
           </p>
           </div>
