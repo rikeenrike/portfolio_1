@@ -1,5 +1,5 @@
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -9,79 +9,76 @@ export default {
       gsap.to(selector, {
         scrollTrigger: {
           trigger: trigger,
-          start: 'top center',
-          end: 'bottom center',
+          start: "top center",
+          end: "bottom center",
           scrub: false,
-          toggleActions: 'play reverse play reverse',
+          toggleActions: "play reverse play reverse",
         },
-        backgroundColor: '#0E0E0C', 
-        color: '#FAFAF9',
-        duration: .5,
-
-      }); 
+        backgroundColor: "#0E0E0C",
+        color: "#FAFAF9",
+        duration: 0.5,
+      });
     },
     texttowhite(selector, trigger) {
-      gsap.to(selector,  {
+      gsap.to(selector, {
         scrollTrigger: {
-            trigger: trigger,
-            start: 'top center',
-            end: 'bottom center',
-            scrub: false,
-            toggleActions: 'play reverse play reverse',
+          trigger: trigger,
+          start: "top center",
+          end: "bottom center",
+          scrub: false,
+          toggleActions: "play reverse play reverse",
         },
-        color: '#FAFAF9', 
-        duration: .5,
-        ease: 'power3.inOut',
-        });
+        color: "#FAFAF9",
+        duration: 0.5,
+        ease: "power3.inOut",
+      });
     },
     nav(selector, trigger) {
-      gsap.to(selector,  {
+      gsap.to(selector, {
         scrollTrigger: {
-            trigger: trigger,
-            start: 'top center',
-            end: 'bottom center',
-            scrub: false,
-            toggleActions: 'play reverse play reverse',
+          trigger: trigger,
+          start: "top center",
+          end: "bottom center",
+          scrub: false,
+          toggleActions: "play reverse play reverse",
         },
-        backgroundColor: '#FAFAF9',
-        color: '#262626',
-        stroke: '#FAFAF9',
-        duration: .5,
-        ease: 'power3.inOut',
-
-    });
+        backgroundColor: "#FAFAF9",
+        color: "#262626",
+        stroke: "#FAFAF9",
+        duration: 0.5,
+        ease: "power3.inOut",
+      });
     },
-    animateupSTAGGER(selector, trigger){
+    animateupSTAGGER(selector, trigger) {
       gsap.from(selector, {
-        scrollTrigger:{
-            trigger: trigger,
-            start: 'top center',
-            end: 'bottom center',
-            scrub: false,
-            toggleActions: 'play none none none',
+        scrollTrigger: {
+          trigger: trigger,
+          start: "top center",
+          end: "bottom center",
+          scrub: false,
+          toggleActions: "play none none none",
         },
-        y: 100, 
+        y: 100,
         opacity: 0,
-        duration: 1, 
-        stagger: 0.1, 
-        ease: 'power3.inOut',
-    });
+        duration: 1,
+        stagger: 0.1,
+        ease: "power3.inOut",
+      });
     },
-    animateup(selector, trigger){
+    animateup(selector, trigger) {
       gsap.from(selector, {
-        scrollTrigger:{
-            trigger: trigger,
-            start: 'top center',
-            end: 'bottom center',
-            scrub: false,
-            toggleActions: 'play none none none',
+        scrollTrigger: {
+          trigger: trigger,
+          start: "top center",
+          end: "bottom center",
+          scrub: false,
+          toggleActions: "play none none none",
         },
-        y: 100, 
+        y: 100,
         opacity: 0,
-        duration: 1, 
-        ease: 'power4.inOut',
-    });
+        duration: 1,
+        ease: "power4.inOut",
+      });
     },
   },
 };
-
