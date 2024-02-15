@@ -43,7 +43,7 @@ onUnmounted(() => {
           This is
           <span
             id="gradient"
-            class="bg-gradient-to-r from-purple via-violet via-pink to-purple bg-[length:200%_auto] bg-clip-text"
+            class="bg-gradient-to-r from-purple via-violet, via-pink to-purple bg-[length:200%_auto] bg-clip-text"
           >
             <span id="highlight" class="bg-inherit text-transparent"
               >the part</span
