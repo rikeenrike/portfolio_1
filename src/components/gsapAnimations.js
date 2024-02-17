@@ -27,6 +27,7 @@ export default {
           end: "bottom center",
           scrub: false,
           toggleActions: "play reverse play reverse",
+          markers: true,
         },
         color: "#FAFAF9",
         duration: 0.5,

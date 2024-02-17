@@ -89,7 +89,9 @@ onUnmounted(() => {
       <h1 id="hello" class="font-black text-clamptitle text-black">hello</h1>
       <h1 class="font-black text-clamptitle text-black">!</h1>
     </div>
-    <div class="text-body2 text-light-gray font-bold lg:text-mod1 lg:flex flex-wrap xl:text-[42px] 2xl:text-heading-3 w-full">
+    <div
+      class="text-body2 text-light-gray font-bold lg:text-mod1 lg:flex flex-wrap xl:text-[42px] 2xl:text-heading-3 w-full"
+    >
       <p @click="scrolltohere(0)" class="mr-[20px]" id="navmain">about me</p>
       <p @click="scrolltohere(1)" class="mr-[20px]" id="navmain">my goal</p>
       <p @click="scrolltohere(2)" class="mr-[20px]" id="navmain">tech stack</p>
