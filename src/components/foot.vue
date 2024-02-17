@@ -34,7 +34,10 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section id="section5" class="h-[80vh] flex flex-col px-[12px] xl:px-[112px]">
+  <section
+    id="section5"
+    class="pointer-events-none h-[80vh] flex flex-col px-[12px] xl:px-[112px]"
+  >
     <div class="py-10 grid md:grid-cols-[1fr,.2fr]">
       <div id="detes" class="select-none mr-10">
         <h1
@@ -143,7 +146,7 @@ onUnmounted(() => {
       </div>
     </div>
     <p>• This site is designed and coded with</p>
-    <img :src="heart1" alt="Heart on Fire" width="25" height="25" />
+      <img :src="heart1" alt="Heart on Fire" width="25" height="25" />
     <p>by Ralph Enrique •</p>
   </div>
 </template>

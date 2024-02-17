@@ -67,7 +67,6 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from "vue";
 import gsap from "gsap";
-import logo from "./logo.vue";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollToPlugin);
