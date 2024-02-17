@@ -26,8 +26,7 @@
         >
           <p id="desc">
             Hey! I'm Ralph Enrique, currently pursuing a major in Information
-            Technology with a focus on Software Engineering at the University of
-            Immaculate Conception in Davao City, Philippines. My current area of
+            Technology with a focus on Software Engineering. My current area of
             focus is in web development technologies.
           </p>
           <p id="desc">

@@ -52,6 +52,14 @@
               Vue.js • PrimeVue • HTML • CSS
             </h1>
           </div>
+          <div
+            id="leftwing"
+            class="flex items-center justify-center px-[15px] rounded-full border-neutral-700 border"
+          >
+            <h1 class="flex text-center text-clamp5 font-bold text-light-brown">
+               in development
+            </h1>
+          </div>
         </div>
         <div
           class="flex flex-col gap-y-10 font-bold text-black text-clamp3 lg:pr-5"
