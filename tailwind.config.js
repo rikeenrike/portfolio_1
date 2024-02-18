@@ -33,7 +33,7 @@ export default {
         clamp2: "clamp(36px, 10vw, 180px)",
         clamp3: "clamp(16px, 1.7vw, 30px)",
         clamp4: "clamp(24px, 2.4vw, 64px)",
-        clamptitle: "clamp(52px, 14vw, 180px)",
+        clamptitle: "clamp(52px, 14vw, 240px)",
         clampsub: "clamp(8px, 2vw, 24px)",
         clamp5: "clamp(12px, 1vw, 32px)",
         clamp6: "clamp(30px, 5.7vw, 64px)",

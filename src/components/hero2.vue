@@ -83,14 +83,10 @@ onUnmounted(() => {
 <template>
   <section
     id="section0"
-    class="select-none h-screen grid items-center px-[12px] lg:grid-cols-[.5fr,.5 fr] xl:px-[112px]"
+    class="select-none h-svh grid items-center px-[12px] lg:grid-rows-[.2fr,1fr,.5fr] xl:px-[112px]"
   >
-    <div class="flex flew-row">
-      <h1 id="hello" class="font-black text-clamptitle text-black">hello</h1>
-      <h1 class="font-black text-clamptitle text-black">!</h1>
-    </div>
     <div
-      class="text-body2 text-light-gray font-bold lg:text-mod1 lg:flex flex-wrap xl:text-[42px] 2xl:text-heading-3 w-full"
+      class="hidden lg:text-light-gray text-body2 lg:flex justify-center 2xl:w-full"
     >
       <p @click="scrolltohere(0)" class="mr-[20px]" id="navmain">about me</p>
       <p @click="scrolltohere(1)" class="mr-[20px]" id="navmain">my goal</p>
@@ -98,6 +94,11 @@ onUnmounted(() => {
       <p @click="scrolltohere(3)" class="mr-[20px]" id="navmain">my projects</p>
       <p @click="scrolltohere(4)" class="mr-[20px]" id="navmain">contact</p>
     </div>
+    <div class="flex flew-row justify-center">
+      <h1 id="hello" class="font-black text-clamptitle text-black">hello</h1>
+      <h1 class="font-black text-clamptitle text-black">!</h1>
+    </div>
+
     <div
       class="flex ml-auto space-x-1 text-body-2 text-light-gray font-bold mt-auto lg:mt-auto"
     >
