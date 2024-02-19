@@ -10,8 +10,8 @@ export default {
         satoshi: ["Satoshi", ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        "main-bg": "#FAFAF9",
-        black: "#0E0E0C",
+        "main-bg": "#f8f4ec",
+        black: "#201c24",
         dark: "#0e0e0c",
         white: "#FFFFFF",
         "dark-brown": "#4E4B4A",

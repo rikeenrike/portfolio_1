@@ -2,10 +2,10 @@
 import { onMounted, onUnmounted } from "vue";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-
+gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrollToPlugin);
 import { TextPlugin } from "gsap/TextPlugin";
-gsap.registerPlugin(TextPlugin);
+
 
 const scrolltohere = (index) => {
   gsap.to(window, {
@@ -53,8 +53,8 @@ onMounted(() => {
       text: languages[index],
       ease: "power4.inOut",
       onComplete: function () {
-        index = (index + 1) % languages.length; // Loop back to 0 when we've gone through all languages
-        animateText(); // Call the function again to animate the next language
+        index = (index + 1) % languages.length; 
+        animateText();
       },
     });
   }
