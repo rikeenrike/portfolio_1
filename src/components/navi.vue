@@ -32,26 +32,6 @@
         </svg>
       </div>
       <div class="flex items-center space-x-2">
-        <span v-if="bigscreen" class="space-x-2">
-          <a
-            id="navs"
-            @click="scrolltohere(0)"
-            class="text-bold hover:font-bold duration-500"
-            >about me</a
-          >
-          <a
-            id="navs"
-            @click="scrolltohere(2)"
-            class="text-bold hover:font-bold duration-500"
-            >tech stack</a
-          >
-          <a
-            id="navs"
-            @click="scrolltohere(3)"
-            class="text-bold hover:font-bold duration-500"
-            >projects</a
-          >
-        </span>
         <button
           id="buttonnav"
           @click="scrolltohere(4)"

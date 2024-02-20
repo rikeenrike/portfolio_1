@@ -2,11 +2,17 @@
 import { onMounted, onUnmounted } from "vue";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { SvgFormat } from "@iconoir/vue";
 gsap.registerPlugin(ScrollToPlugin);
 
 let words = ["hello", "こんにちは", "안녕하세요", "Xin chào", "你好"];
 let ctx;
+const scrolltohere = (index) => {
+  gsap.to(window, {
+    duration: 1,
+    scrollTo: { y: `#section${index + 1}`, offsetY: -300 },
+    ease: "power3.inOut",
+  });
+};
 
 onMounted(() => {
   ctx = gsap.context(() => {
@@ -16,14 +22,6 @@ onMounted(() => {
       repeat: -1,
       ease: "power4.inOut",
     });
-
-    const scrolltohere = (index) => {
-      gsap.to(window, {
-        duration: 1,
-        scrollTo: { y: `#section${index + 1}`, offsetY: -300 },
-        ease: "power3.inOut",
-      });
-    };
 
     const navItems = document.querySelectorAll("#navmain");
     navItems.forEach((item) => {
@@ -83,10 +81,8 @@ onUnmounted(() => {
         <img src="\src\assets\2.png" alt="2" class="w-[16px] h-[16px]" />
         <img src="\src\assets\3.png" alt="3" class="w-[16px] h-[16px]" />
       </div>
-      <p @click="scrolltohere(0)" class="mr-[20px]" id="navmain">about me</p>
       <p @click="scrolltohere(1)" class="mr-[20px]" id="navmain">my goal</p>
       <p @click="scrolltohere(2)" class="mr-[20px]" id="navmain">tech stack</p>
-      <p @click="scrolltohere(3)" class="mr-[20px]" id="navmain">my projects</p>
       <p @click="scrolltohere(4)" class="mr-[20px]" id="navmain">contact</p>
     </div>
 

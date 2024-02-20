@@ -1,11 +1,11 @@
 <template>
   <div
     v-if="smallscreen"
-    class="custom-cursor fixed w-[20px] h-[20px] bg-black rounded-[50%] pointer-events-none z-[10]"
+    class="custom-cursor fixed w-[20px] h-[20px] bg-black rounded-[50%] pointer-events-none z-[20]"
   ></div>
   <div
     v-if="smallscreen"
-    class="hand fixed w-[130px] h-[130px] flex items-center justify-center rotate-[-25deg] pointer-events-none opacity-0 z-[10]"
+    class="hand fixed w-[130px] h-[130px] flex items-center justify-center rotate-[-25deg] pointer-events-none opacity-0 z-[20]"
   >
     <Icon
       icon="fluent:hand-wave-24-regular"
@@ -16,7 +16,7 @@
   </div>
   <div
     v-if="smallscreen"
-    class="handpoint fixed w-[130px] h-[130px] flex items-center justify-center rotate-[-25deg] pointer-events-none opacity-0 z-[10]"
+    class="handpoint fixed w-[130px] h-[130px] flex items-center justify-center rotate-[-25deg] pointer-events-none opacity-0 z-[20]"
   >
     <Icon
       icon="akar-icons:pointer-hand"

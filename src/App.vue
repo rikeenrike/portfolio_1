@@ -85,6 +85,6 @@ requestAnimationFrame(raf);
   <goal class="yawa" />
   <about id="aboutt" />
   <technologies />
-  <project />
+  <!-- <project /> -->
   <foot />
 </template>
