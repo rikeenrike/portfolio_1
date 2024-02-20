@@ -5,46 +5,49 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default {
   methods: {
-    bgchange(selector, trigger) {
+    bgchange(selector, trigger, markers, start, end) {
       gsap.to(selector, {
         scrollTrigger: {
           trigger: trigger,
-          start: "top center",
-          end: "bottom center",
+          start: `${start} center`,
+          end: `${end} center`,
           scrub: false,
           toggleActions: "play reverse play reverse",
+          markers: markers,
         },
         backgroundColor: "#0E0E0C",
-        color: "#FAFAF9",
+        color: "#f8f4ec",
         duration: 0.5,
       });
     },
-    texttowhite(selector, trigger) {
+    texttowhite(selector, trigger, markers, start, end) {
       gsap.to(selector, {
         scrollTrigger: {
           trigger: trigger,
-          start: "top center",
-          end: "bottom center",
+          start: `${start} center`,
+          end: `${end} center`,
           scrub: false,
           toggleActions: "play reverse play reverse",
+          markers: markers,
         },
-        color: "#FAFAF9",
+        color: "#f8f4ec",
         duration: 0.5,
         ease: "power3.inOut",
       });
     },
-    nav(selector, trigger) {
+    nav(selector, trigger, markers, start, end) {
       gsap.to(selector, {
         scrollTrigger: {
           trigger: trigger,
-          start: "top center",
-          end: "bottom center",
+          start: `${start} center`,
+          end: `${end} center`,
           scrub: false,
+          markers: markers,
           toggleActions: "play reverse play reverse",
         },
-        backgroundColor: "#FAFAF9",
+        backgroundColor: "#f8f4ec",
         color: "#262626",
-        stroke: "#FAFAF9",
+        stroke: "#f8f4ec",
         duration: 0.5,
         ease: "power3.inOut",
       });

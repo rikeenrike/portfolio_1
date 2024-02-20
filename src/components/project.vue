@@ -21,12 +21,6 @@
       <div id="leftwingwrapper" class="mr-0 md:my-10 md:mr-10 h-fit">
         <div class="flex flex-row items-center pb-[10px] lg:gap-5">
           <div id="leftwing"></div>
-          <img
-            id="leftwing"
-            class="w-[50px] h-[50px]"
-            src="\src\assets\uiccafe.webp"
-            alt="img"
-          />
           <a
             id="leftwing"
             class="font-black text-light-brown text-clamp4 cursor-none underline decoration-4"
@@ -57,7 +51,7 @@
             class="flex items-center justify-center px-[15px] rounded-full border-neutral-700 border"
           >
             <h1 class="flex text-center text-clamp5 font-bold text-light-brown">
-               in development
+              in development
             </h1>
           </div>
         </div>

@@ -110,15 +110,15 @@ let ctx;
 onMounted(() => {
   window.addEventListener("resize", updateScreenSize);
   ctx = gsap.context(() => {
-    gsapAnimations.methods.bgchange(["#background", "#mainnav"], "#section3");
+    gsapAnimations.methods.bgchange(["#background", "#mainnav"], "#section3", false, "top", "bottom");
     gsapAnimations.methods.nav(
       ["#buttonnav", "#paperplane", ".custom-cursor"],
-      "#section3"
+      "#section3", false, "top", "bottom"
     );
-    gsapAnimations.methods.texttowhite(["#text", "#subtext"], "#section3");
+    gsapAnimations.methods.texttowhite(["#text", "#subtext"], "#section3", false, "top", "bottom");
     gsapAnimations.methods.animateupSTAGGER(
       ["#text", ".techs", "#subtext"],
-      "#section3"
+      "#section3", false, "top", "bottom"
     );
   });
 });

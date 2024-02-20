@@ -1,5 +1,5 @@
 <template>
-  <section id="section1" class="select-none aboutsection">
+  <section id="section1" class="bg-dark select-none aboutsection">
     <div
       id="header"
       class="flex flex-col items-center justify-center font-black text-dark-brown text-clamptitle"

@@ -16,8 +16,8 @@ gsap.registerPlugin(ScrollTrigger);
 onMounted(() => {
   gsap.from("#nav", {
     scrollTrigger: {
-      trigger: "#hero",
-      start: "bottom center",
+      trigger: "#aboutt",
+      start: "top center",
       end: "center center",
       scrub: false,
       toggleActions: "play none none reverse",
@@ -26,6 +26,32 @@ onMounted(() => {
     duration: 1.5,
     ease: "power4.inOut",
     y: -500,
+  });
+  gsap.to("#hero", {
+    scrollTrigger: {
+      trigger: ".thisbg",
+      start: "-=20% 80%",
+      end: "30% 80%",
+      scrub: true,
+      toggleActions: "play none none reverse",
+    },
+    y: "30%",
+  });
+  gsap.to(".preloader", 1, {
+    delay: 2,
+    opacity: 0,
+    ease: "power4.inOut",
+    onComplete: function () {
+      document.querySelector(".preloader").style.display = "none";
+    },
+  });
+  gsap.from("#hello,.nav, #section2", 1, {
+    delay: 2.1,
+    y: "20%",
+    opacity: 0,
+    scale: 0.95,
+    ease: "power3.inOut",
+    stagger: 0.03,
   });
 });
 
@@ -43,12 +69,21 @@ requestAnimationFrame(raf);
 </script>
 
 <template>
-  <div id="background" class="z-[-1] fixed bg-main-bg w-screen h-screen"></div>
+  <div
+    class="preloader fixed h-screen w-screen flex justify-center items-center bg-main-bg z-[1]"
+  >
+    <div class="words text-dark-brown text-mod3 font-bold">Folio @2024</div>
+  </div>
+  <div id="background" class="z-[-1] fixed bg-main-bg w-screen h-screen">
+    <div class="flex items-center justify-center mt-10">
+      <img id="hello" src="/src/assets/shape.svg" alt="Shape" />
+    </div>
+  </div>
   <cursor />
   <navi id="nav" />
-  <hero2 id="hero" />
-  <goal />
-  <about />
+  <hero2 id="hero" class="z-[-1]" />
+  <goal class="yawa" />
+  <about id="aboutt" />
   <technologies />
   <project />
   <foot />

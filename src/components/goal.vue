@@ -1,9 +1,13 @@
 <template>
   <section id="section2">
-    <div class="flex justify-center items-center px-[12px] xl:px-[112px]">
-      <div
-        class="text-clamp1 font-black text-black my-[20%] py-10 leading-[1.25em]"
-      >
+    <div
+      class="thisbg bg-dark rounded-tl-[50px] rounded-tr-[50px] flex flex-col justify-center items-center px-[12px] xl:px-[112px]"
+    >
+      <div id="downarrow" class="z-20 h-[100px] w-screen flex justify-center">
+        <div class="w-[20%] h-[10px] rounded-xl mt-2 bg-main-bg"></div>
+      </div>
+
+      <div class="text-clamp1 font-black text-dark my-[20%] leading-[1.25em]">
         <h1 id="goal">
           I learn and create
           <span
@@ -46,12 +50,32 @@ import gsapAnimations from "/src/components/gsapAnimations.js";
 let ctx;
 onMounted(() => {
   ctx = gsap.context(() => {
-    gsapAnimations.methods.bgchange(["#background", "#mainnav"], "#section2");
-    gsapAnimations.methods.texttowhite(["#goal"], "#section2");
+    gsapAnimations.methods.texttowhite(
+      ["#goal"],
+      "#section2",
+      false,
+      "top",
+      "bottom"
+    );
     gsapAnimations.methods.nav(
       ["#buttonnav", "#paperplane", ".custom-cursor"],
-      "#section2"
+      "#section2",
+      false,
+      "20%",
+      "bottom"
     );
+
+    gsap.to(".thisbg, .aboutsection", {
+      scrollTrigger: {
+        trigger: "#section2",
+        start: "bottom center",
+        end: "center center",
+        scrub: false,
+        toggleActions: "play none none reverse",
+      },
+      backgroundColor: "transparent",
+      duration: 0.5,
+    });
 
     gsap.to("#gradient", {
       backgroundPosition: "200% 0",
@@ -59,6 +83,8 @@ onMounted(() => {
       duration: 3,
       repeat: -1,
     });
+
+    gsapAnimations.methods.animateup("#goal", "#section2");
   });
 });
 onUnmounted(() => {
