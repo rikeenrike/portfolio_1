@@ -29,7 +29,7 @@
             Technology with a focus on Software Engineering. My current area of
             focus is in web development technologies.
           </p>
-          <p id="desc">
+          <p id="desc" class="underline">
             Beyond the digital realm, I'm a passionate cinematographer, drawing
             inspiration from cinematic maestros like Christopher Nolan. Excited
             about merging technology and storytelling.

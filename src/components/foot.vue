@@ -36,7 +36,7 @@ onUnmounted(() => {
 <template>
   <section
     id="section5"
-    class="pointer-events-none h-[80vh] flex flex-col px-[12px] xl:px-[112px]"
+    class="cursor-none h-[80vh] flex flex-col px-[12px] xl:px-[112px]"
   >
     <div class="py-10 grid md:grid-cols-[1fr,.2fr]">
       <div id="detes" class="select-none mr-10">
