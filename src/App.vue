@@ -41,6 +41,7 @@ onMounted(() => {
     delay: 2,
     opacity: 0,
     ease: "power4.inOut",
+    
     onComplete: function () {
       document.querySelector(".preloader").style.display = "none";
     },

@@ -1,35 +1,25 @@
 <template>
   <section id="section1" class="bg-dark select-none aboutsection">
-    <div
-      id="header"
-      class="flex flex-col items-center justify-center font-black text-dark-brown text-clamptitle"
-    >
+    <div id="header" class="flex flex-col items-center justify-center font-black text-dark-brown text-clamptitle">
       <h1>about me.</h1>
     </div>
     <div class="h-fit grid px-[12px] md:grid-cols-[1fr,1fr] xl:px-[112px]">
       <div class="flex flex-col items-center justify-center h-fit my-10">
-        <img
-          id="img"
-          class="aspect-square h-auto w-full rounded-md object-cover object-center md:aspect-auto"
-          src="\src\assets\me.jpg"
-          alt="image of pogi"
-        />
+        <img id="img" class="aspect-square h-auto w-full rounded-md object-cover object-center md:aspect-auto"
+          src="\src\assets\me.jpg" alt="image of pogi" />
       </div>
       <div id="sulandesc" class="pl-0 md:py-10 md:pl-10">
         <div id="sulsul" class="flex flex-row items-center mb-[5%]">
           <h1 class="font-black text-light-brown text-clamp4">hello there!</h1>
           <img class="w-[50px] h-[50px]" :src="emoji_1" alt="emoji" />
         </div>
-        <div
-          id="desc"
-          class="flex flex-col gap-y-10 font-bold text-black text-clamp3"
-        >
+        <div id="desc" class="flex flex-col gap-y-10 font-bold text-black text-clamp3">
           <p id="desc">
             Hey! I'm Ralph Enrique, currently pursuing a major in Information
             Technology with a focus on Software Engineering. My current area of
             focus is in web development technologies.
           </p>
-          <p id="desc" class="underline">
+          <p id="desc">
             Beyond the digital realm, I'm a passionate cinematographer, drawing
             inspiration from cinematic maestros like Christopher Nolan. Excited
             about merging technology and storytelling.
