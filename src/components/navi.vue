@@ -6,8 +6,8 @@
           fill="none">
           <path id="paperplane" d="M23.179 2.21749L44.1222 51.9576L23.179 42.6313L2.23584 51.9576L23.179 2.21749Z"
             stroke="#0E0E0C" stroke-width="3.92685" stroke-linecap="round" stroke-linejoin="round" />
-          <path id="paperplane" d="M23.1798 42.795V2.21754" stroke="#0E0E0C" stroke-width="3.92685" stroke-linecap="round"
-            stroke-linejoin="round" />
+          <path id="paperplane" d="M23.1798 42.795V2.21754" stroke="#0E0E0C" stroke-width="3.92685"
+            stroke-linecap="round" stroke-linejoin="round" />
         </svg>
       </div>
       <div class="flex items-center space-x-2">
@@ -50,6 +50,7 @@ const updateScreenSize = () => {
 
 onMounted(() => {
   window.addEventListener("resize", updateScreenSize);
+  scrolltohere(-1);
 });
 
 onUnmounted(() => {
