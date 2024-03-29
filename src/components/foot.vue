@@ -55,7 +55,8 @@ onUnmounted(() => {
             PHT {{ currentTime }}
           </p>
         </div>
-        <div id="detes">
+
+        <div id="detes" class="flex flex-col">
           <h1 class="font-black text-black">also here</h1>
           <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTMXgCZhDKgBVGxZfbwTwbnBqpJngJDBRPxJWxwSFZbJKqtsWPgQwZJnbRjCRZrzMzHTcg"
             target="_blank" class="text-dark-brown text-clamp3 font-regular  hover:underline">
@@ -66,8 +67,6 @@ onUnmounted(() => {
             <a class="text-dark-brown text-clamp3 font-regular cursor-none  hover:underline"
               href="https://www.linkedin.com/in/ralphenrique/" target="_blank">/in/ralphenrique</a>
           </div>
-        </div>
-        <div id="detes" class="flex flex-col">
           <div class="flex items-center gap-2">
             <Icon icon="devicon:github" width="34" />
             <a class="text-dark-brown text-clamp3 font-regular cursor-none hover:underline"
