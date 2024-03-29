@@ -57,9 +57,10 @@ onUnmounted(() => {
         </div>
         <div id="detes">
           <h1 class="font-black text-black">also here</h1>
-          <p class="text-dark-brown text-clamp3 font-regular  hover:underline">
+          <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTMXgCZhDKgBVGxZfbwTwbnBqpJngJDBRPxJWxwSFZbJKqtsWPgQwZJnbRjCRZrzMzHTcg"
+            target="_blank" class="text-dark-brown text-clamp3 font-regular  hover:underline">
             connect@rikeenrike.me
-          </p>
+          </a>
           <div class="flex items-center gap-2">
             <Icon icon="devicon:linkedin" width="34" />
             <a class="text-dark-brown text-clamp3 font-regular cursor-none  hover:underline"
