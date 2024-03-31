@@ -92,13 +92,15 @@ requestAnimationFrame(raf);
     <div class="flex items-center justify-center mt-10">
       <img id="hello" src="/src/assets/shape.svg" alt="Shape" />
     </div>
-  </div>
+  </div> 
+
   <cursor />
   <navi id="nav" />
   <hero2 id="hero" />
   <goal class="yawa" />
   <about id="aboutt" />
   <technologies />
-  <project />
+  <!-- <project /> -->
   <foot />
+  
 </template>
