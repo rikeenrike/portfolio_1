@@ -6,7 +6,7 @@
         <div class="w-[20%] h-[10px] rounded-xl mt-2 bg-main-bg"></div>
       </div>
 
-      <div class="text-clamp1 font-black text-dark my-[20%] leading-[1.25em]">
+      <div class="text-clamp1 font-black text-dark my-[1  0%] leading-[1.25em]">
         <h1 id="goal">
           I learn and create
           <span id="gradient"

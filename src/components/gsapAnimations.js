@@ -75,7 +75,7 @@ export default {
           start: "top center",
           end: "bottom center",
           scrub: false,
-          toggleActions: "play none none none",
+          toggleActions: "play none none reverse",
         },
         y: 100,
         opacity: 0,

@@ -41,7 +41,7 @@ onMounted(() => {
     delay: 2,
     opacity: 0,
     ease: "power4.inOut",
-    
+
     onComplete: function () {
       document.querySelector(".preloader").style.display = "none";
     },
@@ -70,11 +70,24 @@ requestAnimationFrame(raf);
 </script>
 
 <template>
-  <div
-    class="preloader fixed h-screen w-screen flex justify-center items-center bg-main-bg z-[1]"
-  >
-    <div class="words text-dark-brown text-mod3 font-bold">Folio @2024</div>
+  <div class="preloader fixed h-screen w-screen flex justify-center items-center bg-main-bg z-[1]">
+    <div class="words text-dark-brown text-mod3 font-bold text-center">
+      <p>Folio @2024</p>
+      <span class="flex gap-1">
+        <p class="text-[12px]">Powered by Vercel</p>
+        <Icon icon="devicon:vercel" width="12px" height="15px" />
+      </span>
+    </div>
   </div>
+  <!-- <div class=" fixed w-screen h-screen z-50">
+    <svg width="100%" height="100%" opacity=".2">
+      <filter id="grainy">
+        <feTurbulence type="turbulence" baseFrequency="0.5"></feTurbulence>
+        <feColorMatrix type="saturate" values="0"></feColorMatrix>
+      </filter>
+      <rect width="100%" height="100%" filter="url(#grainy)"></rect>
+    </svg>
+  </div> -->
   <div id="background" class="z-[-1] fixed bg-main-bg w-screen h-screen">
     <div class="flex items-center justify-center mt-10">
       <img id="hello" src="/src/assets/shape.svg" alt="Shape" />
@@ -82,10 +95,10 @@ requestAnimationFrame(raf);
   </div>
   <cursor />
   <navi id="nav" />
-  <hero2 id="hero" class="z-[-1]" />
+  <hero2 id="hero" />
   <goal class="yawa" />
   <about id="aboutt" />
   <technologies />
-  <!-- <project /> -->
+  <project />
   <foot />
 </template>

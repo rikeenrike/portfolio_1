@@ -69,13 +69,9 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section
-    id="section0"
-    class="select-none h-[80vh] grid items-center px-[12px] md:grid-rows-[.2fr,1fr,.5fr] xl:px-[112px]"
-  >
-    <div
-      class="hidden sm:text-dark-brown text-mod3 font-bold sm:flex items-center justify-center 2xl:w-full"
-    >
+  <section id="section0"
+    class="select-none h-[80vh] grid items-center px-[12px] md:grid-rows-[.2fr,1fr,.5fr] xl:px-[112px]">
+    <div class="hidden sm:text-dark-brown text-mod3 font-bold sm:flex items-center justify-center 2xl:w-full">
       <div class="flex items-center mr-auto">
         <img src="\src\assets\1.png" alt="1" class="w-[16px] h-[16px]" />
         <img src="\src\assets\2.png" alt="2" class="w-[16px] h-[16px]" />
@@ -87,23 +83,14 @@ onUnmounted(() => {
     </div>
 
     <div class="h-full w-full flex items-center justify-center">
-      <div
-        id="helcontainer"
-        class="z-20 flex flex-col items-center h-[70%] w-fit"
-      >
-        <div
-          id="hello"
-          class="text-center w-fit h-clamp8 overflow-auto font-black text-clamptitle text-black"
-        >
+      <div id="helcontainer" class="z-20 flex flex-col items-center h-[70%] w-fit">
+        <div id="hello" class="text-center w-fit h-clamp8 overflow-auto font-black text-clamptitle text-black">
           <p class="leading-[1.15]" v-for="(word, index) in words" :key="index">
             {{ word }}
           </p>
           <p class="leading-[1.15]">{{ words[0] }}</p>
         </div>
-        <p
-          id="hello"
-          class="leading-1 z-20 font-bold text-clamp4 text-light-brown text-center"
-        >
+        <p id="hello" class="leading-1 z-20 font-bold text-clamp4 text-light-brown text-center">
           Welcome, to my digital universe expierence.
         </p>
       </div>
